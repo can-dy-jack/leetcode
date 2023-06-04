@@ -1,3 +1,5 @@
+$primary: #25c2a0 !default;
+
 /**
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -15,6 +17,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  $primary: #2e8555;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -27,6 +30,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
+  $primary: #25c2a0;
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -36,7 +40,18 @@
   --ifm-color-primary-lightest: #4fddbf;
 }
 
-
 body {
-  font-family: "楷体", 'Courier New', Courier, monospace;
+  /* font-family: system-ui; */
+  /* font-family: 'Times New Roman', '楷体', var(--ifm-font-family-base); */
+  --ifm-heading-font-family: 'Times New Roman', '楷体';
+}
+.markdown {
+  h1 {
+    border-left: 8px solid $primary;
+    padding-left: 6px;
+    background-color: rgba(red($primary), green($primary), blue($primary), 0.1);
+  }
+  h2 {
+    border-bottom: 1px solid #ccc;
+  }
 }
