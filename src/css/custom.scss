@@ -43,15 +43,26 @@ $primary: #25c2a0 !default;
 body {
   /* font-family: system-ui; */
   /* font-family: 'Times New Roman', '楷体', var(--ifm-font-family-base); */
-  --ifm-heading-font-family: 'Times New Roman', '楷体';
+  --ifm-heading-font-family: 'cascadia code', 'Times New Roman', '楷体';
 }
 .markdown {
+  $color: rgba(red($primary), green($primary), blue($primary), 0.2);
   h1 {
     border-left: 8px solid $primary;
     padding-left: 6px;
-    background-color: rgba(red($primary), green($primary), blue($primary), 0.1);
+    background: linear-gradient(to right, $color, transparent 80%);
   }
   h2 {
     border-bottom: 1px solid #ccc;
+  }
+  h3 {
+    border-bottom: 1px solid #eee;
+  }
+}
+[data-theme='dark'] {
+  .markdown {
+    h3 {
+      border-bottom: 1px solid #888;
+    }
   }
 }
