@@ -38,15 +38,14 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: '',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
@@ -78,6 +77,7 @@ const config = {
             label: 'Tutorial',
           },
           {to: 'blog', label: 'Blog', position: 'left'},
+          {to: 'ryfblog', label: '搬运：阮一峰的博客', position: 'left'},
           // Please keep GitHub link to the right for consistency.
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -167,7 +167,20 @@ const config = {
       },
     }),
   
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ryfblog',
+        path: 'ryfblog',
+        routeBasePath: 'ryfblog',
+        sidebarPath: require.resolve('./sidebarsryfblog.js'),
+        showLastUpdateTime: true,
+        showLastUpdateAuthor: true,
+      },
+    ],
+  ],
 };
 
 module.exports = config;

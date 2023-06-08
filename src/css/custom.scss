@@ -42,8 +42,11 @@ $primary: #25c2a0 !default;
 
 body {
   /* font-family: system-ui; */
-  /* font-family: 'Times New Roman', '楷体', var(--ifm-font-family-base); */
-  --ifm-heading-font-family: 'cascadia code', 'Times New Roman', '楷体';
+  // font-family: var(--ifm-font-family-base);
+  --ifm-heading-font-family: 'SF Mono', 'cascadia code', 'Times New Roman', '楷体', monospace, ;
+}
+html {
+  scroll-behavior: smooth;
 }
 .markdown {
   $color: rgba(red($primary), green($primary), blue($primary), 0.2);
@@ -57,6 +60,12 @@ body {
   }
   h3 {
     border-bottom: 1px solid #eee;
+  }
+  img {
+    border-radius: 0.5rem;
+  }
+  p:has(img) {
+    text-align: center;
   }
 }
 [data-theme='dark'] {

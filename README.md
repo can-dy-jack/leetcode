@@ -1,6 +1,14 @@
 # leetcode
 leetcode 题目题解分享
 
+
+- 文章字数统计、最后编辑时间统计
+- 评论系统
+- footer上添加新的东西
+  - buy me a coffee 图
+  - 许可协议说明
+
+
 <!-- # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
