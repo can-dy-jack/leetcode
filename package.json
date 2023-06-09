@@ -1,7 +1,12 @@
 {
   "name": "leet-code",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
+  "author": {
+    "email": "jjack_chen3@163.com",
+    "name": "kart jim",
+    "url": "https://kartjim.cn"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "dev": "docusaurus start",
@@ -21,9 +26,11 @@
   "dependencies": {
     "@docusaurus/core": "2.4.1",
     "@docusaurus/preset-classic": "2.4.1",
+    "@giscus/react": "^2.2.8",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
     "docusaurus-plugin-sass": "^0.2.3",
+    "mitt": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.62.1"

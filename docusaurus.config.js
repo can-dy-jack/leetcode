@@ -87,7 +87,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        // style: 'light',
         links: [
           {
             title: 'Learn',
@@ -155,16 +155,26 @@ const config = {
             ],
           },
         ],
-        logo: {
-          alt: 'Meta Open Source Logo',
-          // This default includes a positive & negative version, allowing for
-          // appropriate use depending on your site's style.
-          src: '/img/meta_opensource_logo_negative.svg',
-          href: 'https://opensource.fb.com',
-        },
+        // logo: {
+        //   alt: 'Meta Open Source Logo',
+        //   // This default includes a positive & negative version, allowing for
+        //   // appropriate use depending on your site's style.
+        //   src: '/img/meta_opensource_logo_negative.svg',
+        //   href: 'https://opensource.fb.com',
+        // },
         // Please do not remove the credits, help to publicize Docusaurus :)
         copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
       },
+      giscus: {
+        repo: 'can-dy-jack/leetcode',
+        repoId: 'R_kgDOJrNR7g',
+        category: 'Show and tell',
+        categoryId: 'DIC_kwDOJrNR7s4CXFrw',
+
+        theme: 'light',
+        darkTheme: 'dark'
+      },
+      clientModules: [require.resolve('./src/clientModules/routeModules.js')]
     }),
   
   plugins: [
