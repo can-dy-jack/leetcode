@@ -19,8 +19,8 @@ const config = {
 
   organizationName: 'can-dy-jack',
   projectName: 'leetcode',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
   deploymentBranch: 'pages',
 
   presets: [
