@@ -14,7 +14,7 @@ const config = {
   title: '电子笔记',
   tagline: 'leetcode题目解析与博客转载',
   favicon: 'img/book.svg',
-  url: 'https://kartjim.cn',
+  url: 'https://can-dy-jack.github.io',
   baseUrl: '/leetcode/',
 
   organizationName: 'can-dy-jack',
