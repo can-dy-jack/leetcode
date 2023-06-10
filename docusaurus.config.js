@@ -11,23 +11,17 @@
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  favicon: 'img/favicon.ico',
+  title: '电子笔记',
+  tagline: 'leetcode题目解析与博客转载',
+  favicon: 'img/book.svg',
+  url: 'https://kartjim.cn',
+  baseUrl: '/leetcode/',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
+  organizationName: 'can-dy-jack',
+  projectName: 'leetcode',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  deploymentBranch: 'pages',
 
   presets: [
     [
@@ -36,15 +30,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/can-dy-jack/leetcode/tree/master/docs/',
           showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           // editUrl: '',
         },
         theme: {
@@ -64,9 +54,9 @@ const config = {
         additionalLanguages: ['typescript']
       },
       navbar: {
-        title: 'My Meta Project',
+        title: '电子图书馆',
         logo: {
-          alt: 'My Meta Project Logo',
+          alt: '电子图书馆',
           src: 'img/logo.svg',
         },
         items: [
@@ -74,9 +64,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'LeetCode题集',
           },
-          {to: 'blog', label: 'Blog', position: 'left'},
+          {to: 'blog', label: '博客', position: 'left'},
           {to: 'ryfblog', label: '搬运：阮一峰的博客', position: 'left'},
           // Please keep GitHub link to the right for consistency.
           {
@@ -87,83 +77,84 @@ const config = {
         ],
       },
       footer: {
-        // style: 'light',
+        style: 'dark',
         links: [
           {
-            title: 'Learn',
+            title: '电子图书馆组成',
             items: [
               {
-                label: 'Style Guide',
-                to: 'docs/',
+                label: 'LeetCode题集',
+                to: 'docs',
               },
               {
-                label: 'Second Doc',
-                to: 'docs/doc2',
+                label: '搬运：阮一峰的博客',
+                to: 'ryfblog',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '最新文章',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: '黄仁勋的 Nvidia 故事',
+                to: 'ryfblog/257',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: '卡马克的猫',
+                to: 'ryfblog/258',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: '不同的平均值数目',
+                to: 'docs/daily/2023-06-04',
               },
             ],
           },
           {
-            title: 'More',
+            title: '相关技术',
             items: [
               {
-                label: 'Blog',
-                to: 'blog',
+                label: 'React',
+                href: 'https://react.dev',
               },
               {
-                label: 'GitHub',
+                label: 'Docusaurus',
                 href: 'https://github.com/facebook/docusaurus',
               },
+              {
+                label: 'Giscus',
+                href: 'https://giscus.app/zh-CN',
+              },
             ],
           },
           {
-            title: 'Legal',
+            title: '友情链接',
             // Please do not remove the privacy and terms, it's a legal requirement.
             items: [
               {
-                label: 'Privacy',
-                href: 'https://opensource.fb.com/legal/privacy/',
+                label: 'MDN',
+                href: 'https://developer.mozilla.org',
               },
               {
-                label: 'Terms',
-                href: 'https://opensource.fb.com/legal/terms/',
+                label: '掘金',
+                href: 'https://juejin.cn/',
               },
               {
-                label: 'Data Policy',
-                href: 'https://opensource.fb.com/legal/data-policy/',
+                label: 'CC BY-NC-SA 4.0',
+                href: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
               },
               {
-                label: 'Cookie Policy',
-                href: 'https://opensource.fb.com/legal/cookie-policy/',
+                label: 'LeetCode',
+                href: 'https://leetcode.cn',
               },
             ],
           },
         ],
-        // logo: {
-        //   alt: 'Meta Open Source Logo',
-        //   // This default includes a positive & negative version, allowing for
-        //   // appropriate use depending on your site's style.
-        //   src: '/img/meta_opensource_logo_negative.svg',
-        //   href: 'https://opensource.fb.com',
-        // },
-        // Please do not remove the credits, help to publicize Docusaurus :)
-        copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
+        logo: {
+          alt: 'CC Logo',
+          src: '/img/cc.logo.white.svg',
+          href: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} kart jim, Inc. Built with Docusaurus.`,
       },
       giscus: {
         repo: 'can-dy-jack/leetcode',

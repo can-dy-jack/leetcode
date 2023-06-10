@@ -14,16 +14,12 @@ export const Comment = forwardRef<HTMLDivElement>((_props, ref) => {
   const [routeDidUpdate, setRouteDidUpdate] = useState(false);
 
   useEffect(() => {
-    function eventHandler(e) {
-      setRouteDidUpdate(true);
-    }
-    eventHandler()
-
 //     window.emitter.on('onRouteDidUpdate', eventHandler);
 // 
 //     return () => {
 //       window.emitter.off('onRouteDidUpdate', eventHandler);
 //     };
+    setRouteDidUpdate(true);
   }, []);
 
   if (!routeDidUpdate) {
